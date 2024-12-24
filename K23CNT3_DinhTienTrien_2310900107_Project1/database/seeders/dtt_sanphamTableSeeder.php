@@ -59,7 +59,7 @@ class dtt_sanphamTableSeeder extends Seeder
             'dttTrangthai' => 1,
         ]);
         DB::table('dttsanpham')->insert([
-            'dttMasanpham' => 'VP006',
+            'dttMasanpham' => 'VP0099',
             'dttTensanpham' => 'Tranh 2000x1500',
             'dttHinhanh' => 'Tranh 6',
             'dttSoluong' => 50,

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('dttHinhanh', 255);
             $table->integer('dttSoluong');
             $table->float('dttDongia'); 
-            $table->integer('dttMaloai')->references('id')->on('dttloaisanpham');          // Corrected varchar to string
+            $table->string('dttMaloai')->references('id')->on('dttloaisanpham');          // Corrected varchar to string
             $table->tinyInteger('dttTrangthai');         // Tiny integer is fine
             $table->timestamps();
         });
