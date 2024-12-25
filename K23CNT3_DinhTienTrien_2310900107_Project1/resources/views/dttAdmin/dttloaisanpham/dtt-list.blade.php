@@ -1,4 +1,4 @@
-@extends('_dttLayouts.dttAdmin._master')
+@extends('_dttLayouts.backend._master')
 @section('title', 'Danh Sách Loại Sản Phẩm')    
 @section('content-body')
 <div class="container border">
@@ -26,13 +26,9 @@
                         <td>{{ $item->dttTenloai }}</td>
                         <td>{{ $item->dttTrangthai }}</td>
                         <td>
-                            <a href="/dttAdmin/dtt-view/{{$item->id}}" class="btn btn-info">
-                                Xem</a>
-                            <a href="/dttAdmin/dtt-edit/{{$item->id}}" class="btn btn-primary">
-                                Sửa</a>
-                                <a href="/dttAdmin/dtt-delete/{{$item->id}}" class="btn btn-danger" onclick="return dttNoitice();">
-                                    Xóa
-                                </a>   
+                            <a href="/dttAdmin/dtt-view/{{$item->id}}" class="btn btn-info">Xem</a>
+                            <a href="/dttAdmin/dtt-edit/{{$item->id}}" class="btn btn-primary">Sửa</a>
+                            <a href="/dttAdmin/dtt-delete/{{$item->id}}" class="btn btn-danger" onclick="return dttNoitice();">Xóa</a>   
                                 <script>
                                     function dttNoitice() {
                                         return confirm("Bạn có chắc chắn muốn xóa mục này?"); 
@@ -42,7 +38,7 @@
                     </tr>    
                     @empty
                     <tr>
-                        <td colspan="5" class="text-center">Chưa Có Thông Tin</td>
+                        <td colspan="5" class="text-center">Không Có Thông Tin</td>
                     </tr>  
                     @endforelse
                 </tbody>

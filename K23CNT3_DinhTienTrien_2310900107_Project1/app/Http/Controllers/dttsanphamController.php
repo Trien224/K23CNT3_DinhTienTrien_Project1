@@ -1,12 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Models\dttsanphamModel;
 use Illuminate\Http\Request;
-
 class dttsanphamController extends Controller
-{
+{   
+    public function dttView($id) {
+        $dttsanpham = dttsanphamModel::find($id);
+        return view('dttAdmin.dttsanpham.dtt-view', ['dttsanpham' => $dttsanpham]);
+    }
     //
     public function dttList(){
         $dttsanpham = dttsanphamModel::paginate(5);

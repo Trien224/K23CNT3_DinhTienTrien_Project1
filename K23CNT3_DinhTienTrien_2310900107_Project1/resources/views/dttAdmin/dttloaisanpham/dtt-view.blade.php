@@ -1,5 +1,4 @@
-@extends('_dttLayouts.dttAdmin._master')
-
+@extends('_dttLayouts.backend._master')
 @section('title', 'Xem Loại Sản Phẩm')    
 
 @section('content-body')
@@ -7,8 +6,9 @@
     @csrf 
     <div class="card">
         <div class="card-header">
-            <h2>Xem chi tiết sản phẩm</h2>
+            <h3>Chi tiết loại sản phẩm</h3>
         </div>
+
         <div class="card-body container-fluid">
             <div class="mb-3 row">
                 <label for="dttMaloai" class="col-sm-2 col-form-label">Mã loại:</label>
@@ -30,11 +30,12 @@
                         <p>Còn hàng</p>
                     @else
                         <p>Hết hàng</p>
-                    
                     @endif
+
                 </div>
             </div>
         </div>
+
         <div class="card-footer">
             <a href="{{route('tientrien.List') }}" class="btn btn-secondary">Quay lại</a>
         </div>

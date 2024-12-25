@@ -1,4 +1,4 @@
-@extends('_dttLayouts.dttAdmin._master')
+@extends('_dttLayouts.backend._master')
 
 @section('title', 'Thêm Mới Loại Sản Phẩm')    
 
@@ -40,8 +40,8 @@
             </div>
         </div>
         <div class="card-footer">
-            <button type="submit" class="btn btn-success">Ghi lại</button>
-            <a href="{{ route('tientrien.sanpham.List') }}" class="btn btn-secondary">Quay lại</a>
+            <button type="submit" class="btn btn-success">Thêm</button>
+            <a href="{{ route('tientrien.List') }}" class="btn btn-secondary">Quay lại</a>
         </div>
     </div>
 </form>

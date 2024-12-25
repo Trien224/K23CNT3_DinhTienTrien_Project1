@@ -1,4 +1,4 @@
-@extends('_dttLayouts.dttAdmin._master')
+@extends('_dttLayouts.backend._master')
 @section('title', 'Danh Sách Sản Phẩm')    
 @section('content-body')
 <div class="container border">
@@ -19,7 +19,7 @@
                         <th>Đơn giá</th>
                         <th>Mã loại</th>
                         <th>Trạng thái</th>
-
+                        <th>Chức năng</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,19 +28,15 @@
                         <td>{{$loop->iteration+($dttsanpham->currentPage()-1)*$dttsanpham->perPage()}}</td>
                         <td>{{ $item->dttMasanpham }}</td>
                         <td>{{ $item->dttTensanpham }}</td>
-                        <td>{{ $item->dttHinhanh }}</td>
+                        <td> <img src="{{ asset('images/' . $item->dttHinhanh) }}" alt="{{ $item->dttTensanpham }}" style="max-width: 170px;"></td>
                         <td>{{ $item->dttSoluong }}</td>
                         <td>{{ $item->dttDongia }}</td>
                         <td>{{ $item->dttMaloai }}</td>
                         <td>{{ $item->dttTrangthai }}</td>
                         <td>
-                            <a href="#" class="btn btn-info">
-                                Xem</a>
-                            <a href="#" class="btn btn-primary">
-                                Sửa</a>
-                                <a href="#" class="btn btn-danger" onclick="return  dttNotice();">
-                                    Xóa
-                                </a>   
+                            <a href="/dttAdmin/sanpham/dtt-view/{{$item->id}}" class="btn btn-info">Xem</a>
+                            <a href="/dttAdmin/dtt-edit/{{$item->id}}" class="btn btn-primary">Sửa</a>
+                            <a href="#" class="btn btn-danger" onclick="return  dttNotice();">Xóa</a>   
                                 <script>
                                     function  dttNotice() {
                                         return confirm("Bạn có chắc chắn muốn xóa mục này?"); 

@@ -1,16 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Models\dttloaisanphamModel;
 use Illuminate\Http\Request;
-
 class dttloaisanphamController extends Controller
 {
     // crud
     //list
     public function dttHome(){
-        return view('dttAdmin.index');
+        return view('dttAdmin.Index');
     }
     public function dttPutToList(){
         $dttloaisanpham=dttloaisanphamModel::all();

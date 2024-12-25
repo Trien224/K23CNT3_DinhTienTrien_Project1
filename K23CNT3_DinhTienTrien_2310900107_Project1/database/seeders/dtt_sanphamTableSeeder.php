@@ -16,73 +16,73 @@ class dtt_sanphamTableSeeder extends Seeder
         DB::table('dttsanpham')->insert([
             'dttMasanpham' => 'VP001',
             'dttTensanpham' => 'Tranh 1080x990',
-            'dttHinhanh' => 'Tranh 1',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 100,
             'dttDongia' => 1,
-            'dttMaloai' => 1,   // Ensure this is a valid foreign key ID
-            'dttTrangthai' => 0,
+            'dttMaloai' => 'L01',   // Ensure this is a valid foreign key ID
+            'dttTrangthai' => 1,
         ]);
         DB::table('dttsanpham')->insert([
             'dttMasanpham' => 'VP002',
             'dttTensanpham' => 'Tranh 1200x1000',
-            'dttHinhanh' => 'Tranh 2',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 150,
             'dttDongia' => 2,
-            'dttMaloai' => 1,   // Ensure this is a valid foreign key ID
+            'dttMaloai' => 'L01',   // Ensure this is a valid foreign key ID
             'dttTrangthai' => 1,
         ]);
         DB::table('dttsanpham')->insert([
             'dttMasanpham' => 'VP003',
             'dttTensanpham' => 'Tranh 1400x1100',
-            'dttHinhanh' => 'Tranh 3',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 120,
             'dttDongia' => 2.5,
-            'dttMaloai' => 2,   // Ensure this is a valid foreign key ID
+            'dttMaloai' => 'L02',   // Ensure this is a valid foreign key ID
             'dttTrangthai' => 0,
         ]);
         DB::table('dttsanpham')->insert([
             'dttMasanpham' => 'VP004',
             'dttTensanpham' => 'Tranh 1600x1200',
-            'dttHinhanh' => 'Tranh 4',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 80,
             'dttDongia' => 3,
-            'dttMaloai' => 2,   // Ensure this is a valid foreign key ID
-            'dttTrangthai' => 1,
+            'dttMaloai' => 'L02',   // Ensure this is a valid foreign key ID
+            'dttTrangthai' => 0,
         ]);
         DB::table('dttsanpham')->insert([
             'dttMasanpham' => 'VP005',
             'dttTensanpham' => 'Tranh 1800x1300',
-            'dttHinhanh' => 'Tranh 5',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 200,
             'dttDongia' => 1.8,
-            'dttMaloai' => 1,   // Ensure this is a valid foreign key ID
+            'dttMaloai' => 'L01',   // Ensure this is a valid foreign key ID
             'dttTrangthai' => 1,
         ]);
         DB::table('dttsanpham')->insert([
-            'dttMasanpham' => 'VP0099',
+            'dttMasanpham' => 'VP006',
             'dttTensanpham' => 'Tranh 2000x1500',
-            'dttHinhanh' => 'Tranh 6',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 50,
             'dttDongia' => 4,
-            'dttMaloai' => 3,   // Ensure this is a valid foreign key ID
+            'dttMaloai' => 'L01',   // Ensure this is a valid foreign key ID
             'dttTrangthai' => 1,
         ]);
         DB::table('dttsanpham')->insert([
             'dttMasanpham' => 'VP007',
             'dttTensanpham' => 'Tranh 2200x1600',
-            'dttHinhanh' => 'Tranh 7',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 60,
             'dttDongia' => 5,
-            'dttMaloai' => 3,   // Ensure this is a valid foreign key ID
+            'dttMaloai' => 'L01',   // Ensure this is a valid foreign key ID
             'dttTrangthai' => 1,
         ]);
         DB::table('dttsanpham')->insert([
             'dttMasanpham' => 'VP008',
             'dttTensanpham' => 'Tranh 2400x1700',
-            'dttHinhanh' => 'Tranh 8',
+            'dttHinhanh' => 'images\1734990089.jpg',
             'dttSoluong' => 90,
             'dttDongia' => 6,
-            'dttMaloai' => 3,   // Ensure this is a valid foreign key ID
+            'dttMaloai' => 'L02',   // Ensure this is a valid foreign key ID
             'dttTrangthai' => 0,
         ]);
     }

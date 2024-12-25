@@ -1,4 +1,4 @@
-@extends('_dttLayouts.dttAdmin._master')
+@extends('_dttLayouts.backend._master')
 @section('title','Quan Tri Noi Dung')
 @section('content-body')
 <div class="container">

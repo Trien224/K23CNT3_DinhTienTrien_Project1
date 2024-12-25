@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>@yield('title')</title>
-    <link rel="icon" href=
-"https://s3.zerochan.net/240/27/20/4368527.avif"
+    <link rel="icon" href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSvAM-W2pg68d53vo2QIkmHqLlDHE_8Zy8i8NLvpq3uYUx_7BFU"
+    
         type="image/x-icon" />
     <style>
         *{
@@ -27,11 +27,11 @@
 <body style="background: #f10606">
     <section class="container-fluid d-flex">
         <nav class="sideBar m-1">
-            @include('_dttLayouts.dttAdmin._menu')
+            @include('_dttLayouts.backend._menu')
         </nav>
         <section class="wrapper">
             <header>
-                <h2>@include('_dttLayouts.dttAdmin._header')</h2>
+                <h2>@include('_dttLayouts.backend._header')</h2>
             </header>
             <section class="content-body border my-1">
                 @yield('content-body')

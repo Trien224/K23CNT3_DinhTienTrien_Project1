@@ -1,4 +1,4 @@
-@extends('_dttLayouts.dttAdmin._master')
+@extends('_dttLayouts.backend._master')
 
 @section('title', 'Thêm Mới Sản Phẩm')    
 
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="dttMaloai" class="col-sm-2 col-form-label">Chọn Loại</label>
+                <label for="dttMaloai" class="col-sm-2 col-form-label">Thêm</label>
                 <div class="col-sm-10">
                     <select class="form-control" id="dttMaloai" name="dttMaloai" required>
                         <option value="">Chọn Loại</option>
