@@ -20,7 +20,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-        dtt_quantriTableSeeder::class,
-        dtt_loaisanphamTableSeeder::class,]);
+        dtt_quantriTableSeeder::class,dtt_loaisanphamTableSeeder::class,dtt_sanphamTableSeeder::class,
+       ]);
+       
+
+
     }
 }

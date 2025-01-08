@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\dttloaisanphamController;
 use App\Http\Controllers\dttLoginController;
 use App\Http\Controllers\dttsanphamController;
@@ -16,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('welcome')->name('home');
+    return view('welcome');
 });
 route::get('/#',                  [dttLoginController::class,'dttIndex']);
 route::get('/dttAdmin/dtt-Login', [dttLoginController::class,'dttIndex']);
@@ -39,4 +38,8 @@ route::get('/dttAdmin/sanpham/dtt-list',            [dttsanphamController::class
 route::get('/dttAdmin/sanpham/dtt-create',          [dttsanphamController::class,'dttCreate'])->name('tientrien.sanpham.Create');
 route::post('dttAdmin/sanpham/dtt-create',          [dttsanphamController::class,'dttCreateSubmit'])->name('tientrien.sanpham.Create');
 route::get('/dttAdmin/sanpham/dtt-view/{id}',       [dttsanphamController::class,'dttView'])->name('tientrien.sanpham.View');
-
+route::post('dttAdmin/sanpham/dtt-edit/{id}',       [dttsanphamController::class,'dttEditSubmit'])->name('tientrien.sanpham.EditSubmit');
+route::get('/dttAdmin/sanpham/dtt-edit/{id}',       [dttsanphamController::class,'dttEdit'])->name('tientrien.sanpham.Edit');
+route::get('/dttAdmin/sanpham/dtt-delete/{id}',     [dttsanphamController::class,'dttDelete'])->name('tientrien.sanpham.Delete');
+//
+route::get('/dttAdmin/Home',                [dttloaisanphamController::class,'dttHomeHome'])->name('tientrien.HomeHome');

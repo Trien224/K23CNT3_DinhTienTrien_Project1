@@ -10,7 +10,7 @@
         type="image/x-icon" />
     <style>
         .custom-header {
-            background-color: rgb(255, 25, 255);
+            background-color: rgb(00, 33, 66);
         }
         .custom-header .navbar-brand,
         .custom-header .nav-link {
@@ -19,31 +19,53 @@
         .custom-header .nav-link:hover {
             color: red; 
         }
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        }
         .navbar-collapse{
             font-size: 20px;
             color: white;
             
         }
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+        nav a {
+        padding: 0.5rem 1rem;
+        margin: 0 1rem;
+    }
+    body {
+        font-family: 'Arial', sans-serif;
+
+    }
+
     </style>
 </head>
 <body>
     <header class="custom-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light custom-header">
-                <a class="navbar-brand" href="#">Trang Chủ</a>
+                <a class="btn btn-light" href="/dttAdmin/Home" role="button">Trang Chủ</a>
+                <div class="navbar-center">
+                    <h1>Store DttPhotoPhoto</h1>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Trang Chủ</a>
+                            <a class="btn btn-light" href="/dttAdmin" role="button">Thông Tin</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Thông Tin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/dttAdmin/dtt-Login">Đăng Nhập</a>
+                            <a class="btn btn-light" href="/dttAdmin/dtt-Login" role="button">Đăng Nhập</a>
                         </li>
                     </ul>
                 </div>

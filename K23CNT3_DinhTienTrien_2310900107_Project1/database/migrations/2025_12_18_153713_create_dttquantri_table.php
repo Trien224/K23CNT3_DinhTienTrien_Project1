@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('dttquantri', function (Blueprint $table) {
             $table->id();
-            $table->string('dttTaikhoan',255);
+            $table->string('dttTaikhoan',255)->unique();
             $table->string('dttMatkhau',255);
-            $table->tinyInteger('dttTrangthai');
+            $table->tinyInteger('dttTrangthai')->default(1);
             $table->timestamps();
         });
     }

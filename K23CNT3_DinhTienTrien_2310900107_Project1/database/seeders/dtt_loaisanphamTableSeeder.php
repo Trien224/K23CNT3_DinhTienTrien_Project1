@@ -15,13 +15,13 @@ class dtt_loaisanphamTableSeeder extends Seeder
     {
         DB::table('dttloaisanpham')->insert([
             'dttMaloai' => 'L001',
-                'dttTenloai' => 'Tranh PC',
+                'dttTenloai' => 'Ảnh sự kiện',
                 'dttTrangthai' => 1,
            
             ]);
             DB::table('dttloaisanpham')->insert([
                 'dttMaloai' => 'L002',
-                    'dttTenloai' => 'Tranh dep',
+                    'dttTenloai' => 'Ảnh gia đình',
                     'dttTrangthai' => 0,
                
                 ]);

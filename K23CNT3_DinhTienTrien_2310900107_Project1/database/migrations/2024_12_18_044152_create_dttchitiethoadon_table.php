@@ -12,13 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dttchitiethoadon', function (Blueprint $table) {
-            $table->id();
-            $table->integer('dttHoadonID');
-            $table->integer('dttSanphamID')->references('id')->on('dtthoadon');
-            $table->integer('dttSoluongmua')->references('id')->on('dttsanpham');
+            $table->id(); // Tạo khóa chính tự động
+            $table->unsignedBigInteger('dttHoadonID');  // Đảm bảo khóa ngoại có kiểu unsignedBigInteger
+            $table->foreign('dttHoadonID')->references('id')->on('dtthoadon')->onDelete('cascade');
+            
+            $table->unsignedBigInteger('dttSanphamID');  // Đảm bảo khóa ngoại có kiểu unsignedBigInteger
+            $table->foreign('dttSanphamID')->references('id')->on('dttsanpham')->onDelete('cascade');
+            
+            $table->integer('dttSoluongmua');
             $table->float('dttDongiamua');
             $table->float('dttThanhtien');
-            $table->tinyInteger('dttTrangthai'); 
+            $table->tinyInteger('dttTrangthai')->default(1);    
             $table->timestamps();
         });
     }

@@ -25,4 +25,4 @@ class dtt_quantriTableSeeder extends Seeder
             'dttTrangthai'=>0,
             ]);
     }
-}
+} 

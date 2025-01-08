@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\DttNhaCCController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Nhacc
+Route::get('/NhaCCs', [DttNhaCCController::class, 'List'])->name('DttNhacc.ddt-list');

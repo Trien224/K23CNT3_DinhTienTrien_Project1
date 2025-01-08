@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('dttMakhau',255);
             $table->string('dttDienthoai',10)->unique();
             $table->string('dttDiachi',255);
-            $table->datetime('dttNgayDangKy');
-            $table->tinyInteger('dttTrangthai'); 
+            $table->datetime('dttNgayDangKy')->default(now());
+            $table->tinyInteger('dttTrangthai')->default(1);
             $table->timestamps();
         });
     }

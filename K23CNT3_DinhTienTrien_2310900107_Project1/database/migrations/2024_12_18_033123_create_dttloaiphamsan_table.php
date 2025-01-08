@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('dttloaisanpham', function (Blueprint $table) {
             $table->id();
-            $table->string('dttMaloai', 25)->unique();  // Corrected varchar to string
-            $table->string('dttTenloai', 255);           // Corrected varchar to string
-            $table->tinyInteger('dttTrangthai');         // Tiny integer is fine
+            $table->string('dttMaloai', 25)->unique();  
+            $table->string('dttTenloai', 255);         
+            $table->tinyInteger('dttTrangthai')->default(1);  
             $table->timestamps();
         });
     }

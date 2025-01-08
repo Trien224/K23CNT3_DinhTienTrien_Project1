@@ -9,6 +9,9 @@ class dttloaisanphamController extends Controller
     public function dttHome(){
         return view('dttAdmin.Index');
     }
+    public function dttHomeHome(){
+        return view('dttAdmin.Home');
+    }
     public function dttPutToList(){
         $dttloaisanpham=dttloaisanphamModel::all();
         return view('dttAdmin.dttsanpham.dtt-create',compact('dttloaisanpham'));

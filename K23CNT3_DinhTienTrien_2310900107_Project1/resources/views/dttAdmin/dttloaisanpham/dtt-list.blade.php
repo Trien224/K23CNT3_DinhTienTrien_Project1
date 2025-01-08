@@ -1,10 +1,12 @@
 @extends('_dttLayouts.backend._master')
 @section('title', 'Danh Sách Loại Sản Phẩm')    
 @section('content-body')
+<style>
+</style>
 <div class="container border">
     <div class="col-12">
         <h1>Loại Sản Phẩm</h1>
-        <a href="/dttAdmin/dtt-create" class="btn btn-primary">Thêm Loại Sản Phẩm Mới</a>
+        <a href="/dttAdmin/dtt-create" class="btn btn-dark">Thêm loại sản phẩm</a>
     </div>
     <div class="row">
         <div class="col">
@@ -26,7 +28,7 @@
                         <td>{{ $item->dttTenloai }}</td>
                         <td>{{ $item->dttTrangthai }}</td>
                         <td>
-                            <a href="/dttAdmin/dtt-view/{{$item->id}}" class="btn btn-info">Xem</a>
+                            <a href="/dttAdmin/dtt-view/{{$item->id}}" class="btn btn-success">Xem</a>
                             <a href="/dttAdmin/dtt-edit/{{$item->id}}" class="btn btn-primary">Sửa</a>
                             <a href="/dttAdmin/dtt-delete/{{$item->id}}" class="btn btn-danger" onclick="return dttNoitice();">Xóa</a>   
                                 <script>

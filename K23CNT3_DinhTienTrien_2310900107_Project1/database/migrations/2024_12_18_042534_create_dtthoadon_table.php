@@ -14,15 +14,16 @@ return new class extends Migration
         Schema::create('dtthoadon', function (Blueprint $table) {
             $table->id();
             $table->string('dttMahoadon',255)->unique();
-            $table->integer('dttMakhachhang')->references('id')->on('dttkhachhang');;
-            $table->datetime('dttNgayhoadon');
+            $table->string('dttMakhachhang');
+            $table->foreign('dttMakhachhang')->references('dttMakhachhang')->on('dttkhachhang')->onDelete('cascade');
+            $table->datetime('dttNgayhoadon')->default(now());
             $table->datetime('dttNgaynhan');
             $table->string('dttHotenkhachhang',255);
-            $table->string('dttEmail',255);
-            $table->string('dttDienthoai',10);
+            $table->string('dttEmail',255)->unique();
+            $table->string('dttDienthoai',10)->unique();
             $table->string('dttDiachi',255);
             $table->float('dttTongtrigia');
-            $table->tinyInteger('dttTrangthai'); 
+            $table->tinyInteger('dttTrangthai')->default(1);
             $table->timestamps();
         });
     }

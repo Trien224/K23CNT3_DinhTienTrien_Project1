@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('dttMasanpham', 255)->unique();  // Corrected varchar to string
             $table->string('dttTensanpham', 255);
-            $table->string('dttHinhanh', 255);
+            $table->string('dttHinhanh', 255)->nullable();
             $table->integer('dttSoluong');
-            $table->float('dttDongia'); 
-            $table->string('dttMaloai')->references('id')->on('dttloaisanpham');          // Corrected varchar to string
-            $table->tinyInteger('dttTrangthai');         // Tiny integer is fine
+            $table->decimal('dttDongia', 15, 2); 
+            $table->string('dttMaloai'); 
+            $table->foreign('dttMaloai')->references('dttMaloai')->on('dttloaisanpham')->onDelete('cascade');        // Corrected varchar to string
+            $table->tinyInteger('dttTrangthai')->default(1);    // Tiny integer is fine
             $table->timestamps();
         });
     }

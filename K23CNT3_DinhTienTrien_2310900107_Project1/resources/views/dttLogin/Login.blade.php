@@ -11,8 +11,14 @@
     <style>
         body {
             background-color: #c1ef19;
+            background-image: url('{{ asset('/images/27e7896143a04cf6b0549f2771f29201~tplv-photomode-image.jpg')}}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
         }
         .login-container {
+            background-image: url('{{ asset('/images/gioithieu3.jpg')}}');
             max-width: 400px;
             margin: 100px auto;
             padding: 20px;
@@ -24,7 +30,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h2 class="text-center">LOG IN</h2>
+        <h2 class="text-center">Log In</h2>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -43,12 +49,12 @@
                 <input type="text" name="dttTaikhoan" id="dttTaikhoan" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label for="dttMatkhau" class="form-label">Pass</label>
-                <input type="text" name="dttMatkhau" id="dttMatkhau" class="form-control" required>
+                <label for="dttMatkhau" class="form-label">Password</label>
+                <input type="password" name="dttMatkhau" id="dttMatkhau" class="form-control" required>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" name="dttRemember" id="dttRemember" class="form-check-input">
-                <label for="dttRemember" class="form-check-label">Ghi nhớ</label>
+                <label for="dttRemember" class="form-check-label">Remember</label>
             </div>
             <button type="submit" class="btn btn-primary w-100">Login</button>
         </form>

@@ -52,9 +52,9 @@
                 <div class="col-sm-10">
 
                     @if($dttsanpham->dttTrangthai==1)
-                        <p>Còn hàng</p>
+                        <p>Còn dịch vụ</p>
                     @else
-                        <p>Hết hàng</p>
+                        <p>Tạm không có</p>
                     @endif
 
                 </div>

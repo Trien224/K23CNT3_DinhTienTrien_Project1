@@ -1,7 +1,5 @@
 @extends('_dttLayouts.backend._master')
-
 @section('title', 'Thêm Mới Sản Phẩm')    
-
 @section('content-body')
 <form action="{{ route('tientrien.sanpham.Create') }}" method="post" enctype="multipart/form-data">
     @csrf 
@@ -41,7 +39,7 @@
                             const reader = new FileReader();
                             reader.onload = function(e) {
                                 imagePreview.src = e.target.result;
-                                imagePreview.style.display = 'block'; // Còn hàng hình ảnh
+                                imagePreview.style.display = 'block'; // Còn dịch vụ hình ảnh
                             }
                             reader.readAsDataURL(file);
                         } else {
@@ -65,10 +63,10 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="dttMaloai" class="col-sm-2 col-form-label">Thêm</label>
+                <label for="dttMaloai" class="col-sm-2 col-form-label">Tên loại</label>
                 <div class="col-sm-10">
                     <select class="form-control" id="dttMaloai" name="dttMaloai" required>
-                        <option value="">Chọn Loại</option>
+                        <option value="">Chọn Tên Loại</option>
                         @foreach($dttloaisanpham as $item) 
                         <option value="{{ $item->dttMaloai }}">{{ $item->dttTenloai }}</option>
                         @endforeach
@@ -82,16 +80,17 @@
                 <label class="col-sm-2 col-form-label">Trạng thái</label>
                 <div class="col-sm-10">
                     <input type="radio" id="dttTrangthai1" name="dttTrangthai" value="1" checked />
-                    <label for="dttTrangthai1">Còn hàng</label>
+                    <label for="dttTrangthai1">Còn dịch vụ</label>
                     &nbsp;
                     <input type="radio" id="dttTrangthai0" name="dttTrangthai" value="0" />
-                    <label for="dttTrangthai0">Hết hàng</label>
+                    <label for="dttTrangthai0">Tạm không có</label>
                 </div>
             </div>
         </div>
         <div class="card-footer">
-            <button type="submit" class="btn btn-success">Ghi lại</button>
             <a href="{{ route('tientrien.sanpham.List') }}" class="btn btn-secondary">Quay lại</a>
+            <button type="submit" class="btn btn-warning">Thêm</button>
+           
         </div>
     </div>
 </form>

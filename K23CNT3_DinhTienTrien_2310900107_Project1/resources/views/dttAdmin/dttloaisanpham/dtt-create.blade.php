@@ -32,16 +32,17 @@
                 <label class="col-sm-2 col-form-label">Trạng thái</label>
                 <div class="col-sm-10">
                     <input type="radio" id="dttTrangthai1" name="dttTrangthai" value="1" checked />
-                    <label for="dttTrangthai1">Còn hàng</label>
+                    <label for="dttTrangthai1">Còn dịch vụ</label>
                     &nbsp;
                     <input type="radio" id="dttTrangthai0" name="dttTrangthai" value="0" />
-                    <label for="dttTrangthai0">Hết hàng</label>
+                    <label for="dttTrangthai0">Tạm không có </label>
                 </div>
             </div>
         </div>
         <div class="card-footer">
-            <button type="submit" class="btn btn-success">Thêm</button>
-            <a href="{{ route('tientrien.List') }}" class="btn btn-secondary">Quay lại</a>
+            <a class="btn btn-secondary" href="/dttAdmin/dtt-list" role="button">Quay lại</a>
+            <button type="submit" class="btn btn-warning">Thêm</button>
+            
         </div>
     </div>
 </form>
